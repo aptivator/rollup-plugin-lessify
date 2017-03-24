@@ -5,10 +5,10 @@
   "main": "dist/lessify.js",
   "jsnext:main": "dist/lessify.es.js",
   "scripts": {
-    "test": "mocha test/*.js",
+    "postinstall": "node ./install-test-deps",
+    "test": "nightwatch -e e2e",
     "pretest": "npm run build",
-    "build": "rollup -c",
-    "prebuild": "rm -rf dist/* test/dist.cjs.js test/rollup.build.css"
+    "build": "rollup -c"
   },
   "keywords": [
     "rollup",
@@ -34,10 +34,10 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "buble": "^0.15.2",
-    "eslint": "^3.2.2",
     "express": "^4.15.2",
-    "mocha": "^3.0.2",
+    "nightwatch": "^0.9.14",
     "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-node-resolve": "^2.0.0"
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "selenium-download": "^2.0.9"
   }
 }

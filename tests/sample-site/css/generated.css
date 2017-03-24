@@ -1,0 +1,10 @@
+body p {
+  font: 12px/1.5 Sans-serif;
+}
+body p.red {
+  color: red;
+}
+h2 {
+  font: bold 16px/2 Sans-serif;
+  color: gray;
+}

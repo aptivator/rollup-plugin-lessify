@@ -1,13 +1,12 @@
 import {createFilter}    from 'rollup-pluginutils';
 import fs                from 'fs-extra';
-import * as dflts        from './lib/consts';
+import * as df        from './lib/consts';
 import appenderGenerator from './lib/appender-generator';
 import lessifier         from './lib/lessifier';
 
 export default (options = {}) => {
-  let {insert = false, include = dflts.include, exclude = dflts.exclude} = options;
-  let {options: options_ = {}} = options;
-  let {output = dflts.output} = options_;
+  let {insert = false, include = df.include, exclude = df.exclude} = options;
+  let {options: options_ = {}, output = df.output} = options;
   const filter = createFilter(include, exclude);
   filter.count = 0;
 
@@ -38,9 +37,10 @@ export default (options = {}) => {
         }
         return Promise.resolve(css);
       }).then(css => {
-        css = JSON.stringify(css.toString());
+        css = JSON.stringify(css);
         let code = 'export default ';
-        code += insert ? `${dflts.injectFnName}(${css})` : css;
+        code += insert ? `${df.injectFnName}(${css})` : css;
+        code += ';';
         return {code, map: {mappings: ''}};
       }).catch(e => console.error(e));
     }
