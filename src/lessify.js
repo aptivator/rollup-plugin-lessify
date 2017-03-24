@@ -1,6 +1,6 @@
 import {createFilter}    from 'rollup-pluginutils';
 import fs                from 'fs-extra';
-import * as df        from './lib/consts';
+import * as df           from './lib/consts';
 import appenderGenerator from './lib/appender-generator';
 import lessifier         from './lib/lessifier';
 
