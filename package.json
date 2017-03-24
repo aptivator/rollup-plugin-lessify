@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-lessify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A rollup plugin that compiles less files into css",
   "main": "dist/lessify.js",
   "jsnext:main": "dist/lessify.es.js",
