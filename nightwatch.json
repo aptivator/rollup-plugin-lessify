@@ -12,10 +12,6 @@
   "output_folder": false,
   "test_settings" : {
     "e2e": {
-      "screenshots": {
-        "enabled": true,
-        "path": "./screenshots/"
-      },
       "globals": {
         "waitForConditionTimeout": 5000 
       },
