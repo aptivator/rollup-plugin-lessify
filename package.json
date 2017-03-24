@@ -5,7 +5,7 @@
   "main": "dist/lessify.js",
   "jsnext:main": "dist/lessify.es.js",
   "scripts": {
-    "postinstall": "node ./install-test-deps",
+    "install-deps": "node ./install-test-deps",
     "test": "nightwatch -e e2e",
     "pretest": "npm run build",
     "build": "rollup -c"

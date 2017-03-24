@@ -26,6 +26,9 @@ result, the module should be equally usable with either babel or buble.
 
 `npm install rollup-plugin-lessify --save-dev`
 
+If modifying or extending the plugin, after `npm install` and prior to running
+tests do `npm run install-deps` to setup selenium.
+
 ### Example
 
 ```javascript
